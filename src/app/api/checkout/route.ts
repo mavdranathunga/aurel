@@ -16,16 +16,23 @@ export async function POST(req: Request) {
     // Strip the data URL prefix to get raw base64 string for Resend attachment
     const base64Data = pdfBase64.split('base64,')[1];
 
+    // Fallback to the verified owner email if the env variable is missing
+    const sellerEmail = process.env.SELLER_EMAIL || 'deshan.99.ranathunga@gmail.com';
+
     if (!process.env.RESEND_API_KEY) {
       console.warn('RESEND_API_KEY is not set. Simulating email send for development.');
       return NextResponse.json({ success: true, simulated: true });
     }
 
+    if (!process.env.SELLER_EMAIL) {
+      console.warn('SELLER_EMAIL is not set in .env.local. Defaulting to deshan.99.ranathunga@gmail.com');
+    }
+
     const { data, error } = await resend.emails.send({
-      from: 'AUREL Store <onboarding@resend.dev>', // Resend's testing domain, user should replace with their verified domain later
-      to: [email],
-      subject: `Your AUREL Order Confirmation - #${orderId}`,
-      text: `Hi ${name},\n\nThank you for your order! Please find your invoice attached.\n\nBest,\nThe AUREL Team`,
+      from: 'AUREL Store <onboarding@resend.dev>', // Resend's testing domain
+      to: [sellerEmail], // Send exclusively to the seller
+      subject: `New Order Received - #${orderId}`,
+      text: `Hello,\n\nYou have received a new order (${orderId}) from ${name} (${email}).\n\nPlease find the generated invoice attached for their order details.\n\nBest,\nThe AUREL System`,
       attachments: [
         {
           filename: `AUREL-Invoice-${orderId}.pdf`,

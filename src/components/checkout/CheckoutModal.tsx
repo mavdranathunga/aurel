@@ -100,8 +100,8 @@ export default function CheckoutModal({ isOpen, onClose, onSuccess, subtotal }: 
       });
 
       if (!response.ok) {
-        // We won't block the UI if email fails, but we log it.
-        console.error('Failed to send email');
+        const errData = await response.json();
+        console.error('Failed to send email:', errData);
       }
 
       setSuccess(true);
