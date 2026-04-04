@@ -89,6 +89,12 @@
   gap: var(--space-xs);
 }
 
+.searchWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
 .iconWithBadge {
   position: relative;
 }

@@ -36,7 +36,7 @@ export default function CollectionsPage() {
         <div className={styles.grid}>
           {collections.map((col, i) => (
             <ScrollReveal key={col.id} delay={i * 100}>
-              <Link href="/shop" className={styles.card}>
+              <Link href={`/shop?collection=${col.slug}`} className={styles.card}>
                 <div className={styles.cardBg} style={{ background: gradients[i % gradients.length] }} />
                 <div className={styles.imageOverlay} />
                 <img src={col.image} alt={col.name} className={styles.cardImage} />

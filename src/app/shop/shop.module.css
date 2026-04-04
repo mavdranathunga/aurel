@@ -9,12 +9,41 @@
 }
 
 .heroText {
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: var(--text-secondary);
+  max-width: 600px;
   margin-top: var(--space-md);
-  max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
+}
+
+.searchStatus {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-top: var(--space-lg);
+  padding: var(--space-xs) var(--space-md);
+  background: var(--accent-dim);
+  border: 1px solid var(--accent);
+  border-radius: var(--radius-full);
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.clearSearch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: var(--radius-full);
+  background: var(--accent);
+  color: var(--bg-primary);
+  margin-left: 4px;
+  transition: transform var(--transition-base);
+}
+
+.clearSearch:hover {
+  transform: scale(1.1);
 }
 
 .toolbar {

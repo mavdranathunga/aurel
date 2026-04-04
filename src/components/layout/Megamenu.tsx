@@ -32,7 +32,7 @@ const data = {
     {
       title: 'Sale',
       description: 'Exclusive offers on last season favorites.',
-      href: '/shop?filter=sale',
+      href: '/shop?category=offers',
       image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=400&auto=format&fit=crop',
     },
   ],
@@ -40,25 +40,25 @@ const data = {
     {
       title: "Men's Collection",
       description: 'Refined essentials for the modern gentleman.',
-      href: '/collections/mens-collection',
+      href: '/shop?collection=mens-collection',
       image: 'https://plus.unsplash.com/premium_photo-1727942419945-1908baae3c8e?w=400&auto=format&fit=crop',
     },
     {
       title: "Women's Collection",
       description: 'Sophisticated silhouettes in luxurious fabrics.',
-      href: '/collections/womens-collection',
+      href: '/shop?collection=womens-collection',
       image: 'https://images.unsplash.com/photo-1483985988355-763728e1935b?w=400&auto=format&fit=crop',
     },
     {
       title: 'New Arrivals',
       description: 'Discover the latest from our SS26 line.',
-      href: '/collections/new-arrivals',
+      href: '/shop?collection=new-arrivals',
       image: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=400&auto=format&fit=crop',
     },
     {
       title: 'Iconic Labels',
       description: 'Our most coveted pieces, chosen by you.',
-      href: '/collections/bestsellers',
+      href: '/shop?collection=bestsellers',
       image: 'https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?w=400&auto=format&fit=crop',
     },
   ],

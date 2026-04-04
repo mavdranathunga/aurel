@@ -8,6 +8,7 @@ import { useWishlist } from '@/context/WishlistContext';
 import { useTheme } from 'next-themes';
 import Megamenu from './Megamenu';
 import styles from './Navbar.module.css';
+import SearchOverlay from './SearchOverlay';
 
 const navLinks = [
   { label: 'Home', href: '/' },
@@ -22,7 +23,9 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
   const [hoveredMenu, setHoveredMenu] = useState<'shop' | 'collections' | null>(null);
+  const [searchOpen, setSearchOpen] = useState(false);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const searchRef = useRef<HTMLDivElement>(null);
 
   const { itemCount } = useCart();
   const { itemCount: wishlistCount } = useWishlist();
@@ -30,18 +33,21 @@ export default function Navbar() {
 
   useEffect(() => {
     setMounted(true);
-    const handleScroll = () => setScrolled(window.scrollY > 50);
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+      if (window.scrollY > 50 && searchOpen) setSearchOpen(false);
+    };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [searchOpen]);
 
   useEffect(() => {
-    if (mobileOpen) {
+    if (mobileOpen || searchOpen) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = '';
     }
-  }, [mobileOpen]);
+  }, [mobileOpen, searchOpen]);
 
   const handleMouseEnter = (type?: 'shop' | 'collections') => {
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
@@ -89,9 +95,20 @@ export default function Navbar() {
           </nav>
 
           <div className={styles.actions}>
-            <Link href="/shop" className="btn-icon" aria-label="Search" id="nav-search">
-              <Search size={20} />
-            </Link>
+            <div className={styles.searchWrapper}>
+              <button 
+                className="btn-icon" 
+                onClick={() => setSearchOpen(!searchOpen)}
+                aria-label="Search" 
+                id="nav-search"
+              >
+                <Search size={20} />
+              </button>
+              <SearchOverlay 
+                isOpen={searchOpen} 
+                onClose={() => setSearchOpen(false)} 
+              />
+            </div>
             
             {mounted && (
               <button
