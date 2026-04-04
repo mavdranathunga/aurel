@@ -68,23 +68,32 @@ export default function ProductPage() {
           {/* Images */}
           <div className={styles.gallery}>
             <div className={styles.mainImage}>
-              <div className={styles.imagePlaceholder} style={{ background: product.colors[activeImage % product.colors.length].hex + '22' }}>
-                <span className={styles.imageText}>{product.name}</span>
-              </div>
+              {product.images && product.images.length > 0 ? (
+                <img src={product.images[activeImage % product.images.length]} alt={product.name} className={styles.fullImage} />
+              ) : (
+                <div className={styles.imagePlaceholder} style={{ background: product.colors[activeImage % product.colors.length]?.hex + '22' }}>
+                  <span className={styles.imageText}>{product.name}</span>
+                </div>
+              )}
               {product.badge && (
                 <span className={`badge ${product.badge === 'new' ? 'badge-new' : product.badge === 'sale' ? 'badge-sale' : 'badge-bestseller'} ${styles.badge}`}>
                   {product.badge}
                 </span>
               )}
             </div>
+            
             <div className={styles.thumbnails}>
-              {product.colors.map((color, i) => (
+              {(product.images && product.images.length > 0 ? product.images : product.colors).map((item, i) => (
                 <button
                   key={i}
                   className={`${styles.thumb} ${activeImage === i ? styles.activeThumb : ''}`}
                   onClick={() => setActiveImage(i)}
                 >
-                  <div style={{ background: color.hex + '33', width: '100%', height: '100%', borderRadius: 'var(--radius-sm)' }} />
+                  {product.images && product.images.length > 0 ? (
+                    <img src={product.images[i]} alt="Thumbnail" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 'var(--radius-sm)' }} />
+                  ) : (
+                    <div style={{ background: (item as any).hex + '33', width: '100%', height: '100%', borderRadius: 'var(--radius-sm)' }} />
+                  )}
                 </button>
               ))}
             </div>

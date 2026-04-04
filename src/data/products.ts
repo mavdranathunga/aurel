@@ -20,6 +20,7 @@ export const products: Product[] = [
     care: ['Dry clean only', 'Store on a padded hanger', 'Steam to remove wrinkles'],
     category: 'men',
     subcategory: 'Blazers',
+    images: ['https://picsum.photos/seed/aurel_513/800/1200', 'https://picsum.photos/seed/aurel_959/800/1200'],
     sizes: [
       { label: 'S', available: true },
       { label: 'M', available: true },
@@ -32,7 +33,6 @@ export const products: Product[] = [
       { name: 'Navy', hex: '#1B2A4A' },
       { name: 'Black', hex: '#1A1A1A' }
     ],
-    images: ['/images/products/blazer-1.jpg', '/images/products/blazer-2.jpg'],
     badge: 'sale',
     rating: 4.8,
     reviews: 124,
@@ -56,6 +56,7 @@ export const products: Product[] = [
     care: ['Professional dry clean', 'Store in garment bag', 'Avoid direct sunlight'],
     category: 'women',
     subcategory: 'Dresses',
+    images: ['https://picsum.photos/seed/aurel_984/800/1200', 'https://picsum.photos/seed/aurel_768/800/1200'],
     sizes: [
       { label: 'XS', available: true },
       { label: 'S', available: true },
@@ -68,7 +69,6 @@ export const products: Product[] = [
       { name: 'Midnight', hex: '#191970' },
       { name: 'Ruby', hex: '#9B111E' }
     ],
-    images: ['/images/products/dress-1.jpg', '/images/products/dress-2.jpg'],
     badge: 'new',
     rating: 4.9,
     reviews: 89,
@@ -92,6 +92,7 @@ export const products: Product[] = [
     care: ['Wipe with damp cloth', 'Apply leather conditioner monthly', 'Store stuffed to maintain shape'],
     category: 'accessories',
     subcategory: 'Bags',
+    images: ['https://picsum.photos/seed/aurel_749/800/1200', 'https://picsum.photos/seed/aurel_22/800/1200'],
     sizes: [
       { label: 'One Size', available: true }
     ],
@@ -99,7 +100,6 @@ export const products: Product[] = [
       { name: 'Cognac', hex: '#9A463D' },
       { name: 'Black', hex: '#1A1A1A' }
     ],
-    images: ['/images/products/bag-1.jpg', '/images/products/bag-2.jpg'],
     badge: 'bestseller',
     rating: 4.9,
     reviews: 256,
@@ -124,6 +124,7 @@ export const products: Product[] = [
     care: ['Dry clean only', 'Use cedar hangers', 'Brush after each wear'],
     category: 'men',
     subcategory: 'Outerwear',
+    images: ['https://picsum.photos/seed/aurel_437/800/1200', 'https://picsum.photos/seed/aurel_634/800/1200'],
     sizes: [
       { label: 'S', available: false },
       { label: 'M', available: true },
@@ -135,7 +136,6 @@ export const products: Product[] = [
       { name: 'Camel', hex: '#C19A6B' },
       { name: 'Charcoal', hex: '#36454F' }
     ],
-    images: ['/images/products/overcoat-1.jpg', '/images/products/overcoat-2.jpg'],
     badge: 'sale',
     rating: 4.7,
     reviews: 67,
@@ -158,6 +158,7 @@ export const products: Product[] = [
     care: ['Hand wash cold', 'Lay flat to dry', 'Do not tumble dry'],
     category: 'men',
     subcategory: 'Knitwear',
+    images: ['https://picsum.photos/seed/aurel_957/800/1200', 'https://picsum.photos/seed/aurel_870/800/1200'],
     sizes: [
       { label: 'S', available: true },
       { label: 'M', available: true },
@@ -170,7 +171,6 @@ export const products: Product[] = [
       { name: 'Black', hex: '#1A1A1A' },
       { name: 'Forest', hex: '#228B22' }
     ],
-    images: ['/images/products/turtleneck-1.jpg', '/images/products/turtleneck-2.jpg'],
     rating: 4.6,
     reviews: 198,
     inStock: true
@@ -193,6 +193,7 @@ export const products: Product[] = [
     care: ['Dry clean recommended', 'Iron at medium heat', 'Hang on wooden hanger'],
     category: 'men',
     subcategory: 'Suits',
+    images: ['https://picsum.photos/seed/aurel_53/800/1200', 'https://picsum.photos/seed/aurel_366/800/1200'],
     sizes: [
       { label: 'S', available: true },
       { label: 'M', available: true },
@@ -203,7 +204,6 @@ export const products: Product[] = [
       { name: 'Sand', hex: '#C2B280' },
       { name: 'Slate', hex: '#708090' }
     ],
-    images: ['/images/products/linen-suit-1.jpg', '/images/products/linen-suit-2.jpg'],
     badge: 'new',
     rating: 4.5,
     reviews: 42,
@@ -226,6 +226,7 @@ export const products: Product[] = [
     care: ['Hand wash in cold water', 'Use cashmere shampoo', 'Reshape and dry flat'],
     category: 'accessories',
     subcategory: 'Scarves',
+    images: ['https://picsum.photos/seed/aurel_285/800/1200', 'https://picsum.photos/seed/aurel_312/800/1200'],
     sizes: [
       { label: 'One Size', available: true }
     ],
@@ -234,7 +235,6 @@ export const products: Product[] = [
       { name: 'Burgundy', hex: '#800020' },
       { name: 'Grey', hex: '#808080' }
     ],
-    images: ['/images/products/scarf-1.jpg', '/images/products/scarf-2.jpg'],
     rating: 4.8,
     reviews: 143,
     inStock: true
@@ -256,6 +256,7 @@ export const products: Product[] = [
     care: ['Dry clean or gentle machine wash', 'Iron on low', 'Hang dry'],
     category: 'women',
     subcategory: 'Trousers',
+    images: ['https://picsum.photos/seed/aurel_507/800/1200', 'https://picsum.photos/seed/aurel_765/800/1200'],
     sizes: [
       { label: 'XS', available: true },
       { label: 'S', available: true },
@@ -268,7 +269,6 @@ export const products: Product[] = [
       { name: 'Cream', hex: '#FFFDD0' },
       { name: 'Navy', hex: '#1B2A4A' }
     ],
-    images: ['/images/products/trousers-1.jpg', '/images/products/trousers-2.jpg'],
     badge: 'bestseller',
     rating: 4.7,
     reviews: 312,
@@ -292,6 +292,7 @@ export const products: Product[] = [
     care: ['Avoid contact with water beyond rating', 'Wipe with soft cloth', 'Service every 3-5 years'],
     category: 'accessories',
     subcategory: 'Watches',
+    images: ['https://picsum.photos/seed/aurel_47/800/1200', 'https://picsum.photos/seed/aurel_998/800/1200'],
     sizes: [
       { label: 'One Size', available: true }
     ],
@@ -299,7 +300,6 @@ export const products: Product[] = [
       { name: 'Silver/Tan', hex: '#D2B48C' },
       { name: 'Gold/Black', hex: '#1A1A1A' }
     ],
-    images: ['/images/products/watch-1.jpg', '/images/products/watch-2.jpg'],
     badge: 'new',
     rating: 4.9,
     reviews: 78,
@@ -323,6 +323,7 @@ export const products: Product[] = [
     care: ['Dry clean only', 'Cool iron on reverse', 'Store on padded hanger'],
     category: 'women',
     subcategory: 'Tops',
+    images: ['https://picsum.photos/seed/aurel_707/800/1200', 'https://picsum.photos/seed/aurel_961/800/1200'],
     sizes: [
       { label: 'XS', available: true },
       { label: 'S', available: true },
@@ -335,7 +336,6 @@ export const products: Product[] = [
       { name: 'Black', hex: '#1A1A1A' },
       { name: 'Blush', hex: '#DE5D83' }
     ],
-    images: ['/images/products/blouse-1.jpg', '/images/products/blouse-2.jpg'],
     rating: 4.6,
     reviews: 156,
     inStock: true
@@ -358,6 +358,7 @@ export const products: Product[] = [
     care: ['Use shoe trees when not wearing', 'Polish regularly', 'Rotate with other shoes'],
     category: 'men',
     subcategory: 'Shoes',
+    images: ['https://picsum.photos/seed/aurel_391/800/1200', 'https://picsum.photos/seed/aurel_930/800/1200'],
     sizes: [
       { label: '40', available: true },
       { label: '41', available: true },
@@ -371,7 +372,6 @@ export const products: Product[] = [
       { name: 'Dark Brown', hex: '#654321' },
       { name: 'Black', hex: '#1A1A1A' }
     ],
-    images: ['/images/products/loafers-1.jpg', '/images/products/loafers-2.jpg'],
     badge: 'bestseller',
     rating: 4.8,
     reviews: 201,
@@ -395,6 +395,7 @@ export const products: Product[] = [
     care: ['Dry clean only', 'Store folded', 'Steam to refresh'],
     category: 'women',
     subcategory: 'Outerwear',
+    images: ['https://picsum.photos/seed/aurel_641/800/1200', 'https://picsum.photos/seed/aurel_164/800/1200'],
     sizes: [
       { label: 'S', available: true },
       { label: 'M', available: true },
@@ -404,7 +405,6 @@ export const products: Product[] = [
       { name: 'Camel', hex: '#C19A6B' },
       { name: 'Black', hex: '#1A1A1A' }
     ],
-    images: ['/images/products/cape-1.jpg', '/images/products/cape-2.jpg'],
     badge: 'new',
     rating: 4.7,
     reviews: 34,
@@ -428,6 +428,7 @@ export const products: Product[] = [
     care: ['Machine wash warm', 'Tumble dry low', 'Iron on medium'],
     category: 'men',
     subcategory: 'Shirts',
+    images: ['https://picsum.photos/seed/aurel_537/800/1200', 'https://picsum.photos/seed/aurel_905/800/1200'],
     sizes: [
       { label: 'S', available: true },
       { label: 'M', available: true },
@@ -440,7 +441,6 @@ export const products: Product[] = [
       { name: 'Light Blue', hex: '#ADD8E6' },
       { name: 'Pink', hex: '#FFB6C1' }
     ],
-    images: ['/images/products/shirt-1.jpg', '/images/products/shirt-2.jpg'],
     rating: 4.5,
     reviews: 287,
     inStock: true
@@ -463,6 +463,7 @@ export const products: Product[] = [
     care: ['Protect with suede spray', 'Brush with suede brush', 'Store in dust bag'],
     category: 'accessories',
     subcategory: 'Bags',
+    images: ['https://picsum.photos/seed/aurel_228/800/1200', 'https://picsum.photos/seed/aurel_930/800/1200'],
     sizes: [
       { label: 'One Size', available: true }
     ],
@@ -471,7 +472,6 @@ export const products: Product[] = [
       { name: 'Black', hex: '#1A1A1A' },
       { name: 'Tan', hex: '#D2B48C' }
     ],
-    images: ['/images/products/crossbody-1.jpg', '/images/products/crossbody-2.jpg'],
     rating: 4.6,
     reviews: 98,
     inStock: true
@@ -494,6 +494,7 @@ export const products: Product[] = [
     care: ['Hand wash cold', 'Lay flat to dry', 'Do not bleach'],
     category: 'women',
     subcategory: 'Dresses',
+    images: ['https://picsum.photos/seed/aurel_901/800/1200', 'https://picsum.photos/seed/aurel_563/800/1200'],
     sizes: [
       { label: 'XS', available: true },
       { label: 'S', available: true },
@@ -506,7 +507,6 @@ export const products: Product[] = [
       { name: 'Black', hex: '#1A1A1A' },
       { name: 'Oatmeal', hex: '#D4C5A9' }
     ],
-    images: ['/images/products/knit-dress-1.jpg', '/images/products/knit-dress-2.jpg'],
     rating: 4.4,
     reviews: 176,
     inStock: true
@@ -528,6 +528,7 @@ export const products: Product[] = [
     care: ['Condition every 6 months', 'Store rolled or hanging', 'Avoid prolonged moisture'],
     category: 'accessories',
     subcategory: 'Belts',
+    images: ['https://picsum.photos/seed/aurel_464/800/1200', 'https://picsum.photos/seed/aurel_832/800/1200'],
     sizes: [
       { label: 'S', available: true },
       { label: 'M', available: true },
@@ -538,7 +539,6 @@ export const products: Product[] = [
       { name: 'Black', hex: '#1A1A1A' },
       { name: 'Brown', hex: '#8B4513' }
     ],
-    images: ['/images/products/belt-1.jpg', '/images/products/belt-2.jpg'],
     rating: 4.5,
     reviews: 89,
     inStock: true
@@ -561,6 +561,7 @@ export const products: Product[] = [
     care: ['Dry clean only', 'Iron on wool setting', 'Hang to store'],
     category: 'women',
     subcategory: 'Trousers',
+    images: ['https://picsum.photos/seed/aurel_780/800/1200', 'https://picsum.photos/seed/aurel_11/800/1200'],
     sizes: [
       { label: 'XS', available: true },
       { label: 'S', available: true },
@@ -572,7 +573,6 @@ export const products: Product[] = [
       { name: 'Black', hex: '#1A1A1A' },
       { name: 'Ivory', hex: '#FFFFF0' }
     ],
-    images: ['/images/products/wide-leg-1.jpg', '/images/products/wide-leg-2.jpg'],
     rating: 4.6,
     reviews: 145,
     inStock: true
@@ -595,6 +595,7 @@ export const products: Product[] = [
     care: ['Machine wash cold', 'Tumble dry low', 'Iron on low if needed'],
     category: 'men',
     subcategory: 'T-Shirts',
+    images: ['https://picsum.photos/seed/aurel_476/800/1200', 'https://picsum.photos/seed/aurel_948/800/1200'],
     sizes: [
       { label: 'S', available: true },
       { label: 'M', available: true },
@@ -607,7 +608,6 @@ export const products: Product[] = [
       { name: 'Black', hex: '#1A1A1A' },
       { name: 'Olive', hex: '#808000' }
     ],
-    images: ['/images/products/tee-1.jpg', '/images/products/tee-2.jpg'],
     rating: 4.7,
     reviews: 432,
     inStock: true
@@ -630,6 +630,7 @@ export const products: Product[] = [
     care: ['Machine wash delicate', 'Hang dry', 'Low iron if needed'],
     category: 'women',
     subcategory: 'Skirts',
+    images: ['https://picsum.photos/seed/aurel_156/800/1200', 'https://picsum.photos/seed/aurel_240/800/1200'],
     sizes: [
       { label: 'XS', available: true },
       { label: 'S', available: true },
@@ -641,7 +642,6 @@ export const products: Product[] = [
       { name: 'Emerald', hex: '#50C878' },
       { name: 'Black', hex: '#1A1A1A' }
     ],
-    images: ['/images/products/satin-skirt-1.jpg', '/images/products/satin-skirt-2.jpg'],
     badge: 'new',
     rating: 4.3,
     reviews: 56,
@@ -665,6 +665,7 @@ export const products: Product[] = [
     care: ['Clean with included cloth', 'Store in hard case', 'Avoid placing lens-down'],
     category: 'accessories',
     subcategory: 'Eyewear',
+    images: ['https://picsum.photos/seed/aurel_388/800/1200', 'https://picsum.photos/seed/aurel_88/800/1200'],
     sizes: [
       { label: 'One Size', available: true }
     ],
@@ -672,7 +673,6 @@ export const products: Product[] = [
       { name: 'Gold/Green', hex: '#228B22' },
       { name: 'Silver/Grey', hex: '#808080' }
     ],
-    images: ['/images/products/sunglasses-1.jpg', '/images/products/sunglasses-2.jpg'],
     rating: 4.7,
     reviews: 167,
     inStock: true

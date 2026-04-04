@@ -7,6 +7,7 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import AnnouncementBar from '@/components/layout/AnnouncementBar';
 import Toast from '@/components/ui/Toast';
+import ScrollToTop from '@/components/ui/ScrollToTop';
 
 const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
@@ -47,6 +48,7 @@ export default function RootLayout({
             <Navbar />
             <main>{children}</main>
             <Footer />
+            <ScrollToTop />
             <Toast />
           </WishlistProvider>
         </CartProvider>

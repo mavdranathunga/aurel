@@ -34,9 +34,13 @@ export default function ProductCard({ product }: ProductCardProps) {
   return (
     <Link href={`/product/${product.slug}`} className={styles.card} id={`product-card-${product.id}`}>
       <div className={styles.imageWrap}>
-        <div className={styles.imagePlaceholder} style={{ background: product.colors[0].hex + '22' }}>
-          <span className={styles.placeholderText}>{product.name.charAt(0)}</span>
-        </div>
+        {product.images && product.images.length > 0 ? (
+          <img src={product.images[0]} alt={product.name} className={styles.productImage} />
+        ) : (
+          <div className={styles.imagePlaceholder} style={{ background: product.colors[0].hex + '22' }}>
+            <span className={styles.placeholderText}>{product.name.charAt(0)}</span>
+          </div>
+        )}
 
         {product.badge && (
           <span className={`badge ${product.badge === 'new' ? 'badge-new' : product.badge === 'sale' ? 'badge-sale' : 'badge-bestseller'} ${styles.badge}`}>

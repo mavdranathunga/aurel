@@ -10,9 +10,9 @@ export interface Product {
   care: string[];
   category: 'men' | 'women' | 'accessories';
   subcategory: string;
+  images: string[];
   sizes: Size[];
   colors: ProductColor[];
-  images: string[];
   badge?: 'new' | 'sale' | 'bestseller';
   rating: number;
   reviews: number;
