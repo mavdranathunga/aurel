@@ -1,0 +1,128 @@
+.page {
+  padding-top: calc(var(--nav-height) + var(--announcement-height) + var(--space-2xl));
+  padding-bottom: var(--space-4xl);
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-2xl);
+  padding-bottom: var(--space-lg);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.count {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: var(--space-5xl) 0;
+}
+
+.emptyIcon {
+  color: var(--text-muted);
+  margin-bottom: var(--space-xl);
+  opacity: 0.4;
+}
+
+.emptyText {
+  max-width: 380px;
+  color: var(--text-secondary);
+  margin: var(--space-md) 0 var(--space-2xl);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-xl);
+}
+
+.card {
+  position: relative;
+}
+
+.imageWrap {
+  display: block;
+  aspect-ratio: 3 / 4;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin-bottom: var(--space-md);
+  background: var(--bg-card);
+}
+
+.imagePlaceholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  color: var(--text-muted);
+  opacity: 0.3;
+  transition: transform var(--transition-slow);
+}
+
+.card:hover .imagePlaceholder {
+  transform: scale(1.05);
+}
+
+.removeBtn {
+  position: absolute;
+  top: var(--space-md);
+  right: var(--space-md);
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-full);
+  background: rgba(10, 10, 10, 0.8);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.removeBtn:hover {
+  background: var(--error);
+  color: white;
+  border-color: var(--error);
+}
+
+.info {
+  padding: 0 var(--space-xs);
+}
+
+.name {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+  transition: color var(--transition-base);
+}
+
+.name:hover {
+  color: var(--accent);
+}
+
+.price {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+  .grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .grid { grid-template-columns: repeat(2, 1fr); gap: var(--space-md); }
+}

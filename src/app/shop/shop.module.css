@@ -1,0 +1,116 @@
+.page {
+  padding-top: calc(var(--nav-height) + var(--announcement-height));
+}
+
+.hero {
+  padding: var(--space-4xl) 0 var(--space-2xl);
+  text-align: center;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.heroText {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin-top: var(--space-md);
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-xl) 0;
+  border-bottom: 1px solid var(--border-light);
+  margin-bottom: var(--space-2xl);
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.categories {
+  display: flex;
+  gap: var(--space-xs);
+}
+
+.catBtn {
+  padding: 8px 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+  border: 1px solid transparent;
+  border-radius: var(--radius-full);
+  background: none;
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.catBtn:hover {
+  color: var(--text-primary);
+  border-color: var(--border);
+}
+
+.catBtn.active {
+  color: var(--bg-primary);
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.toolbarRight {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+.count {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.sortWrap {
+  min-width: 180px;
+}
+
+.sortSelect {
+  padding: 8px 36px 8px 14px;
+  font-size: 0.8rem;
+  background-color: var(--bg-elevated);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-xl);
+  padding-bottom: var(--space-4xl);
+}
+
+.empty {
+  text-align: center;
+  padding: var(--space-4xl);
+  color: var(--text-muted);
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+  }
+  .categories {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .toolbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

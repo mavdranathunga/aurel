@@ -1,0 +1,702 @@
+import { Product } from '@/types';
+
+export const products: Product[] = [
+  {
+    id: '1',
+    slug: 'tailored-wool-blazer',
+    name: 'Tailored Wool Blazer',
+    price: 89700,
+    originalPrice: 110200,
+    description: 'A masterfully tailored blazer crafted from premium Italian wool. Features a modern slim fit with structured shoulders and a two-button closure. Perfect for both formal occasions and refined casual styling.',
+    details: [
+      'Italian wool blend fabric',
+      'Slim fit silhouette',
+      'Two-button closure',
+      'Functional button cuffs',
+      'Interior chest pocket',
+      'Fully lined'
+    ],
+    materials: '85% Wool, 15% Cashmere',
+    care: ['Dry clean only', 'Store on a padded hanger', 'Steam to remove wrinkles'],
+    category: 'men',
+    subcategory: 'Blazers',
+    sizes: [
+      { label: 'S', available: true },
+      { label: 'M', available: true },
+      { label: 'L', available: true },
+      { label: 'XL', available: true },
+      { label: 'XXL', available: false }
+    ],
+    colors: [
+      { name: 'Charcoal', hex: '#36454F' },
+      { name: 'Navy', hex: '#1B2A4A' },
+      { name: 'Black', hex: '#1A1A1A' }
+    ],
+    images: ['/images/products/blazer-1.jpg', '/images/products/blazer-2.jpg'],
+    badge: 'sale',
+    rating: 4.8,
+    reviews: 124,
+    inStock: true
+  },
+  {
+    id: '2',
+    slug: 'silk-evening-dress',
+    name: 'Silk Evening Dress',
+    price: 132300,
+    description: 'An exquisite floor-length evening dress in flowing pure silk. Features a draped neckline, fitted waist, and an elegant A-line skirt that moves beautifully. The epitome of red-carpet glamour.',
+    details: [
+      'Pure mulberry silk',
+      'Draped neckline',
+      'Fitted waistline',
+      'A-line silhouette',
+      'Hidden back zipper',
+      'Fully lined in silk'
+    ],
+    materials: '100% Mulberry Silk',
+    care: ['Professional dry clean', 'Store in garment bag', 'Avoid direct sunlight'],
+    category: 'women',
+    subcategory: 'Dresses',
+    sizes: [
+      { label: 'XS', available: true },
+      { label: 'S', available: true },
+      { label: 'M', available: true },
+      { label: 'L', available: true },
+      { label: 'XL', available: false }
+    ],
+    colors: [
+      { name: 'Champagne', hex: '#F7E7CE' },
+      { name: 'Midnight', hex: '#191970' },
+      { name: 'Ruby', hex: '#9B111E' }
+    ],
+    images: ['/images/products/dress-1.jpg', '/images/products/dress-2.jpg'],
+    badge: 'new',
+    rating: 4.9,
+    reviews: 89,
+    inStock: true
+  },
+  {
+    id: '3',
+    slug: 'leather-weekender-bag',
+    name: 'Leather Weekender Bag',
+    price: 108600,
+    description: 'Handcrafted full-grain leather weekender bag with brass hardware. Spacious interior with multiple compartments. Built to develop a rich patina over years of use.',
+    details: [
+      'Full-grain leather',
+      'Brass YKK zippers',
+      'Cotton twill lining',
+      'Detachable shoulder strap',
+      'Interior shoe compartment',
+      'Leather luggage tag included'
+    ],
+    materials: '100% Full-Grain Leather',
+    care: ['Wipe with damp cloth', 'Apply leather conditioner monthly', 'Store stuffed to maintain shape'],
+    category: 'accessories',
+    subcategory: 'Bags',
+    sizes: [
+      { label: 'One Size', available: true }
+    ],
+    colors: [
+      { name: 'Cognac', hex: '#9A463D' },
+      { name: 'Black', hex: '#1A1A1A' }
+    ],
+    images: ['/images/products/bag-1.jpg', '/images/products/bag-2.jpg'],
+    badge: 'bestseller',
+    rating: 4.9,
+    reviews: 256,
+    inStock: true
+  },
+  {
+    id: '4',
+    slug: 'cashmere-overcoat',
+    name: 'Cashmere Overcoat',
+    price: 187400,
+    originalPrice: 236200,
+    description: 'Luxurious double-breasted overcoat in the finest cashmere. A timeless investment piece with impeccable construction and a silhouette that flatters every frame.',
+    details: [
+      'Premium cashmere',
+      'Double-breasted closure',
+      'Peak lapels',
+      'Two side pockets',
+      'Interior pocket',
+      'Back vent for movement'
+    ],
+    materials: '90% Cashmere, 10% Wool',
+    care: ['Dry clean only', 'Use cedar hangers', 'Brush after each wear'],
+    category: 'men',
+    subcategory: 'Outerwear',
+    sizes: [
+      { label: 'S', available: false },
+      { label: 'M', available: true },
+      { label: 'L', available: true },
+      { label: 'XL', available: true },
+      { label: 'XXL', available: true }
+    ],
+    colors: [
+      { name: 'Camel', hex: '#C19A6B' },
+      { name: 'Charcoal', hex: '#36454F' }
+    ],
+    images: ['/images/products/overcoat-1.jpg', '/images/products/overcoat-2.jpg'],
+    badge: 'sale',
+    rating: 4.7,
+    reviews: 67,
+    inStock: true
+  },
+  {
+    id: '5',
+    slug: 'merino-turtleneck',
+    name: 'Merino Wool Turtleneck',
+    price: 45600,
+    description: 'Ultra-fine merino wool turtleneck sweater with a slim, modern fit. Incredibly soft against the skin with natural temperature regulation. A wardrobe essential.',
+    details: [
+      'Extra-fine merino wool',
+      'Slim fit',
+      'Ribbed collar, cuffs and hem',
+      'Lightweight layering piece',
+      'Anti-pilling technology'
+    ],
+    materials: '100% Extra-Fine Merino Wool',
+    care: ['Hand wash cold', 'Lay flat to dry', 'Do not tumble dry'],
+    category: 'men',
+    subcategory: 'Knitwear',
+    sizes: [
+      { label: 'S', available: true },
+      { label: 'M', available: true },
+      { label: 'L', available: true },
+      { label: 'XL', available: true },
+      { label: 'XXL', available: true }
+    ],
+    colors: [
+      { name: 'Ivory', hex: '#FFFFF0' },
+      { name: 'Black', hex: '#1A1A1A' },
+      { name: 'Forest', hex: '#228B22' }
+    ],
+    images: ['/images/products/turtleneck-1.jpg', '/images/products/turtleneck-2.jpg'],
+    rating: 4.6,
+    reviews: 198,
+    inStock: true
+  },
+  {
+    id: '6',
+    slug: 'structured-linen-suit',
+    name: 'Structured Linen Suit',
+    price: 146400,
+    description: 'A beautifully structured linen suit for warm-weather elegance. Half-canvas construction ensures a refined drape while the lightweight linen keeps you cool.',
+    details: [
+      'Premium European linen',
+      'Half-canvas construction',
+      'Single-breasted, two-button',
+      'Flat-front trousers',
+      'Surgeon cuffs',
+      'Unlined for breathability'
+    ],
+    materials: '100% European Linen',
+    care: ['Dry clean recommended', 'Iron at medium heat', 'Hang on wooden hanger'],
+    category: 'men',
+    subcategory: 'Suits',
+    sizes: [
+      { label: 'S', available: true },
+      { label: 'M', available: true },
+      { label: 'L', available: true },
+      { label: 'XL', available: false }
+    ],
+    colors: [
+      { name: 'Sand', hex: '#C2B280' },
+      { name: 'Slate', hex: '#708090' }
+    ],
+    images: ['/images/products/linen-suit-1.jpg', '/images/products/linen-suit-2.jpg'],
+    badge: 'new',
+    rating: 4.5,
+    reviews: 42,
+    inStock: true
+  },
+  {
+    id: '7',
+    slug: 'cashmere-wrap-scarf',
+    name: 'Cashmere Wrap Scarf',
+    price: 55100,
+    description: 'Oversized cashmere wrap scarf that doubles as a shawl. Feather-light yet wonderfully warm, woven in Scotland from the finest Mongolian cashmere.',
+    details: [
+      'Grade-A Mongolian cashmere',
+      'Woven in Scotland',
+      'Oversized 200cm x 70cm',
+      'Hand-rolled edges',
+      'Gift boxed'
+    ],
+    materials: '100% Mongolian Cashmere',
+    care: ['Hand wash in cold water', 'Use cashmere shampoo', 'Reshape and dry flat'],
+    category: 'accessories',
+    subcategory: 'Scarves',
+    sizes: [
+      { label: 'One Size', available: true }
+    ],
+    colors: [
+      { name: 'Oatmeal', hex: '#D4C5A9' },
+      { name: 'Burgundy', hex: '#800020' },
+      { name: 'Grey', hex: '#808080' }
+    ],
+    images: ['/images/products/scarf-1.jpg', '/images/products/scarf-2.jpg'],
+    rating: 4.8,
+    reviews: 143,
+    inStock: true
+  },
+  {
+    id: '8',
+    slug: 'tailored-cigarette-trousers',
+    name: 'Tailored Cigarette Trousers',
+    price: 51900,
+    description: 'Sleek cigarette trousers with a high waist and tapered leg. Crafted in stretch wool for comfort that moves with you. The foundation of a powerful wardrobe.',
+    details: [
+      'Stretch wool blend',
+      'High-rise waist',
+      'Tapered leg',
+      'Concealed side zipper',
+      'Pressed crease detail'
+    ],
+    materials: '95% Wool, 5% Elastane',
+    care: ['Dry clean or gentle machine wash', 'Iron on low', 'Hang dry'],
+    category: 'women',
+    subcategory: 'Trousers',
+    sizes: [
+      { label: 'XS', available: true },
+      { label: 'S', available: true },
+      { label: 'M', available: true },
+      { label: 'L', available: true },
+      { label: 'XL', available: true }
+    ],
+    colors: [
+      { name: 'Black', hex: '#1A1A1A' },
+      { name: 'Cream', hex: '#FFFDD0' },
+      { name: 'Navy', hex: '#1B2A4A' }
+    ],
+    images: ['/images/products/trousers-1.jpg', '/images/products/trousers-2.jpg'],
+    badge: 'bestseller',
+    rating: 4.7,
+    reviews: 312,
+    inStock: true
+  },
+  {
+    id: '9',
+    slug: 'minimalist-leather-watch',
+    name: 'Minimalist Leather Watch',
+    price: 70800,
+    description: 'Swiss-made minimalist timepiece with a brushed steel case and Italian leather strap. The clean dial with slim indices embodies understated luxury.',
+    details: [
+      'Swiss quartz movement',
+      'Brushed 316L steel case',
+      'Sapphire crystal glass',
+      'Italian leather strap',
+      '40mm case diameter',
+      'Water resistant 50m'
+    ],
+    materials: '316L Stainless Steel, Italian Leather',
+    care: ['Avoid contact with water beyond rating', 'Wipe with soft cloth', 'Service every 3-5 years'],
+    category: 'accessories',
+    subcategory: 'Watches',
+    sizes: [
+      { label: 'One Size', available: true }
+    ],
+    colors: [
+      { name: 'Silver/Tan', hex: '#D2B48C' },
+      { name: 'Gold/Black', hex: '#1A1A1A' }
+    ],
+    images: ['/images/products/watch-1.jpg', '/images/products/watch-2.jpg'],
+    badge: 'new',
+    rating: 4.9,
+    reviews: 78,
+    inStock: true
+  },
+  {
+    id: '10',
+    slug: 'silk-blouse',
+    name: 'Silk Button-Down Blouse',
+    price: 61400,
+    description: 'Effortlessly elegant silk blouse with a relaxed fit and mother-of-pearl buttons. The lustrous fabric drapes beautifully, transitioning seamlessly from office to evening.',
+    details: [
+      'Pure mulberry silk',
+      'Relaxed fit',
+      'Mother-of-pearl buttons',
+      'Point collar',
+      'French seam finishing',
+      'Curved hemline'
+    ],
+    materials: '100% Mulberry Silk',
+    care: ['Dry clean only', 'Cool iron on reverse', 'Store on padded hanger'],
+    category: 'women',
+    subcategory: 'Tops',
+    sizes: [
+      { label: 'XS', available: true },
+      { label: 'S', available: true },
+      { label: 'M', available: true },
+      { label: 'L', available: false },
+      { label: 'XL', available: true }
+    ],
+    colors: [
+      { name: 'Ivory', hex: '#FFFFF0' },
+      { name: 'Black', hex: '#1A1A1A' },
+      { name: 'Blush', hex: '#DE5D83' }
+    ],
+    images: ['/images/products/blouse-1.jpg', '/images/products/blouse-2.jpg'],
+    rating: 4.6,
+    reviews: 156,
+    inStock: true
+  },
+  {
+    id: '11',
+    slug: 'italian-leather-loafers',
+    name: 'Italian Leather Loafers',
+    price: 86600,
+    description: 'Hand-sewn penny loafers crafted by Italian artisans from butter-soft calfskin. The Blake-stitched leather sole provides flexibility while maintaining a clean profile.',
+    details: [
+      'Hand-sewn in Italy',
+      'Calfskin leather upper',
+      'Blake-stitched construction',
+      'Leather sole with rubber insert',
+      'Leather lining',
+      'Cushioned insole'
+    ],
+    materials: '100% Italian Calfskin Leather',
+    care: ['Use shoe trees when not wearing', 'Polish regularly', 'Rotate with other shoes'],
+    category: 'men',
+    subcategory: 'Shoes',
+    sizes: [
+      { label: '40', available: true },
+      { label: '41', available: true },
+      { label: '42', available: true },
+      { label: '43', available: true },
+      { label: '44', available: true },
+      { label: '45', available: false }
+    ],
+    colors: [
+      { name: 'Tan', hex: '#D2B48C' },
+      { name: 'Dark Brown', hex: '#654321' },
+      { name: 'Black', hex: '#1A1A1A' }
+    ],
+    images: ['/images/products/loafers-1.jpg', '/images/products/loafers-2.jpg'],
+    badge: 'bestseller',
+    rating: 4.8,
+    reviews: 201,
+    inStock: true
+  },
+  {
+    id: '12',
+    slug: 'cashmere-blend-cape',
+    name: 'Cashmere Blend Cape',
+    price: 121200,
+    description: 'Dramatic cape coat in a sumptuous cashmere blend. Features an oversized collar and arm slits for ease of movement. A statement piece for the modern woman.',
+    details: [
+      'Cashmere-wool blend',
+      'Oversized collar',
+      'Arm slits',
+      'Single-button closure',
+      'Knee length',
+      'Fully lined'
+    ],
+    materials: '70% Wool, 30% Cashmere',
+    care: ['Dry clean only', 'Store folded', 'Steam to refresh'],
+    category: 'women',
+    subcategory: 'Outerwear',
+    sizes: [
+      { label: 'S', available: true },
+      { label: 'M', available: true },
+      { label: 'L', available: true }
+    ],
+    colors: [
+      { name: 'Camel', hex: '#C19A6B' },
+      { name: 'Black', hex: '#1A1A1A' }
+    ],
+    images: ['/images/products/cape-1.jpg', '/images/products/cape-2.jpg'],
+    badge: 'new',
+    rating: 4.7,
+    reviews: 34,
+    inStock: true
+  },
+  {
+    id: '13',
+    slug: 'oxford-dress-shirt',
+    name: 'Oxford Dress Shirt',
+    price: 37800,
+    description: 'Classic Oxford dress shirt in premium Egyptian cotton. Features a spread collar, barrel cuffs, and a tailored fit that looks sharp tucked or untucked.',
+    details: [
+      'Egyptian cotton Oxford cloth',
+      'Spread collar',
+      'Barrel cuffs',
+      'Tailored fit',
+      'Mother-of-pearl buttons',
+      'Back box pleat'
+    ],
+    materials: '100% Egyptian Cotton',
+    care: ['Machine wash warm', 'Tumble dry low', 'Iron on medium'],
+    category: 'men',
+    subcategory: 'Shirts',
+    sizes: [
+      { label: 'S', available: true },
+      { label: 'M', available: true },
+      { label: 'L', available: true },
+      { label: 'XL', available: true },
+      { label: 'XXL', available: true }
+    ],
+    colors: [
+      { name: 'White', hex: '#FFFFFF' },
+      { name: 'Light Blue', hex: '#ADD8E6' },
+      { name: 'Pink', hex: '#FFB6C1' }
+    ],
+    images: ['/images/products/shirt-1.jpg', '/images/products/shirt-2.jpg'],
+    rating: 4.5,
+    reviews: 287,
+    inStock: true
+  },
+  {
+    id: '14',
+    slug: 'suede-crossbody-bag',
+    name: 'Suede Crossbody Bag',
+    price: 61400,
+    description: 'Compact suede crossbody bag with gold-tone hardware. Features an adjustable chain strap and magnetic flap closure. Perfect for day-to-night versatility.',
+    details: [
+      'Italian suede',
+      'Gold-tone hardware',
+      'Adjustable chain strap',
+      'Magnetic flap closure',
+      'Interior card slots',
+      'Microfiber lining'
+    ],
+    materials: '100% Italian Suede',
+    care: ['Protect with suede spray', 'Brush with suede brush', 'Store in dust bag'],
+    category: 'accessories',
+    subcategory: 'Bags',
+    sizes: [
+      { label: 'One Size', available: true }
+    ],
+    colors: [
+      { name: 'Sage', hex: '#B2AC88' },
+      { name: 'Black', hex: '#1A1A1A' },
+      { name: 'Tan', hex: '#D2B48C' }
+    ],
+    images: ['/images/products/crossbody-1.jpg', '/images/products/crossbody-2.jpg'],
+    rating: 4.6,
+    reviews: 98,
+    inStock: true
+  },
+  {
+    id: '15',
+    slug: 'ribbed-knit-midi-dress',
+    name: 'Ribbed Knit Midi Dress',
+    price: 58200,
+    description: 'Body-sculpting ribbed knit dress in a midi length. The stretchy fabric hugs your curves while the crew neckline and long sleeves keep it refined. Dress it up or down.',
+    details: [
+      'Fine-gauge ribbed knit',
+      'Crew neckline',
+      'Long sleeves',
+      'Midi length',
+      'Pull-on style',
+      'Unlined'
+    ],
+    materials: '75% Viscose, 25% Polyamide',
+    care: ['Hand wash cold', 'Lay flat to dry', 'Do not bleach'],
+    category: 'women',
+    subcategory: 'Dresses',
+    sizes: [
+      { label: 'XS', available: true },
+      { label: 'S', available: true },
+      { label: 'M', available: true },
+      { label: 'L', available: true },
+      { label: 'XL', available: false }
+    ],
+    colors: [
+      { name: 'Chocolate', hex: '#7B3F00' },
+      { name: 'Black', hex: '#1A1A1A' },
+      { name: 'Oatmeal', hex: '#D4C5A9' }
+    ],
+    images: ['/images/products/knit-dress-1.jpg', '/images/products/knit-dress-2.jpg'],
+    rating: 4.4,
+    reviews: 176,
+    inStock: true
+  },
+  {
+    id: '16',
+    slug: 'leather-belt-gold-buckle',
+    name: 'Leather Belt with Gold Buckle',
+    price: 29900,
+    description: 'Sleek leather belt with a polished gold-tone buckle. Made from full-grain leather that develops character over time. An essential finishing touch.',
+    details: [
+      'Full-grain leather',
+      'Polished gold-tone buckle',
+      '3cm width',
+      'Five-hole adjustment',
+      'Branded interior stamp'
+    ],
+    materials: '100% Full-Grain Leather, Zinc Alloy Buckle',
+    care: ['Condition every 6 months', 'Store rolled or hanging', 'Avoid prolonged moisture'],
+    category: 'accessories',
+    subcategory: 'Belts',
+    sizes: [
+      { label: 'S', available: true },
+      { label: 'M', available: true },
+      { label: 'L', available: true },
+      { label: 'XL', available: true }
+    ],
+    colors: [
+      { name: 'Black', hex: '#1A1A1A' },
+      { name: 'Brown', hex: '#8B4513' }
+    ],
+    images: ['/images/products/belt-1.jpg', '/images/products/belt-2.jpg'],
+    rating: 4.5,
+    reviews: 89,
+    inStock: true
+  },
+  {
+    id: '17',
+    slug: 'wool-wide-leg-trousers',
+    name: 'Wool Wide-Leg Trousers',
+    price: 61400,
+    description: 'Elegant wide-leg trousers in fluid wool crepe. The high waist and flowing silhouette create a long, lean line. Features pressed center front creases.',
+    details: [
+      'Wool crepe fabric',
+      'High-rise waist',
+      'Wide-leg silhouette',
+      'Center front creases',
+      'Side zip closure',
+      'Partially lined'
+    ],
+    materials: '100% Virgin Wool',
+    care: ['Dry clean only', 'Iron on wool setting', 'Hang to store'],
+    category: 'women',
+    subcategory: 'Trousers',
+    sizes: [
+      { label: 'XS', available: true },
+      { label: 'S', available: true },
+      { label: 'M', available: true },
+      { label: 'L', available: true },
+      { label: 'XL', available: true }
+    ],
+    colors: [
+      { name: 'Black', hex: '#1A1A1A' },
+      { name: 'Ivory', hex: '#FFFFF0' }
+    ],
+    images: ['/images/products/wide-leg-1.jpg', '/images/products/wide-leg-2.jpg'],
+    rating: 4.6,
+    reviews: 145,
+    inStock: true
+  },
+  {
+    id: '18',
+    slug: 'premium-cotton-tee',
+    name: 'Premium Cotton T-Shirt',
+    price: 23600,
+    description: 'The perfect t-shirt, reinvented. Cut from heavyweight Japanese cotton with a boxy, modern fit. Pre-washed for softness with a lived-in feel from day one.',
+    details: [
+      'Japanese heavyweight cotton',
+      'Boxy fit',
+      'Crew neckline',
+      'Pre-washed',
+      'Reinforced seams',
+      'Tonal stitching'
+    ],
+    materials: '100% Japanese Cotton, 240gsm',
+    care: ['Machine wash cold', 'Tumble dry low', 'Iron on low if needed'],
+    category: 'men',
+    subcategory: 'T-Shirts',
+    sizes: [
+      { label: 'S', available: true },
+      { label: 'M', available: true },
+      { label: 'L', available: true },
+      { label: 'XL', available: true },
+      { label: 'XXL', available: true }
+    ],
+    colors: [
+      { name: 'White', hex: '#FFFFFF' },
+      { name: 'Black', hex: '#1A1A1A' },
+      { name: 'Olive', hex: '#808000' }
+    ],
+    images: ['/images/products/tee-1.jpg', '/images/products/tee-2.jpg'],
+    rating: 4.7,
+    reviews: 432,
+    inStock: true
+  },
+  {
+    id: '19',
+    slug: 'draped-satin-skirt',
+    name: 'Draped Satin Midi Skirt',
+    price: 51900,
+    description: 'Fluid satin midi skirt with asymmetric draping. The bias cut ensures a flattering fit that skims the body. Features an elastic waistband for effortless wearability.',
+    details: [
+      'Satin-finish fabric',
+      'Bias cut',
+      'Asymmetric drape detail',
+      'Elastic waistband',
+      'Midi length',
+      'Fully lined'
+    ],
+    materials: '92% Polyester, 8% Elastane',
+    care: ['Machine wash delicate', 'Hang dry', 'Low iron if needed'],
+    category: 'women',
+    subcategory: 'Skirts',
+    sizes: [
+      { label: 'XS', available: true },
+      { label: 'S', available: true },
+      { label: 'M', available: true },
+      { label: 'L', available: true }
+    ],
+    colors: [
+      { name: 'Gold', hex: '#C9A96E' },
+      { name: 'Emerald', hex: '#50C878' },
+      { name: 'Black', hex: '#1A1A1A' }
+    ],
+    images: ['/images/products/satin-skirt-1.jpg', '/images/products/satin-skirt-2.jpg'],
+    badge: 'new',
+    rating: 4.3,
+    reviews: 56,
+    inStock: true
+  },
+  {
+    id: '20',
+    slug: 'aviator-sunglasses',
+    name: 'Aviator Sunglasses',
+    price: 58200,
+    description: 'Classic aviator sunglasses with titanium frames and polarized lenses. Ultra-lightweight at just 22g with adjustable nose pads for a custom fit.',
+    details: [
+      'Titanium frame',
+      'Polarized CR-39 lenses',
+      'UV400 protection',
+      'Adjustable nose pads',
+      '22g total weight',
+      'Includes hard case and cleaning cloth'
+    ],
+    materials: 'Titanium, CR-39 Polarized Lenses',
+    care: ['Clean with included cloth', 'Store in hard case', 'Avoid placing lens-down'],
+    category: 'accessories',
+    subcategory: 'Eyewear',
+    sizes: [
+      { label: 'One Size', available: true }
+    ],
+    colors: [
+      { name: 'Gold/Green', hex: '#228B22' },
+      { name: 'Silver/Grey', hex: '#808080' }
+    ],
+    images: ['/images/products/sunglasses-1.jpg', '/images/products/sunglasses-2.jpg'],
+    rating: 4.7,
+    reviews: 167,
+    inStock: true
+  }
+];
+
+export function getProductBySlug(slug: string): Product | undefined {
+  return products.find((p) => p.slug === slug);
+}
+
+export function getProductsByCategory(category: string): Product[] {
+  return products.filter((p) => p.category === category);
+}
+
+export function getFeaturedProducts(): Product[] {
+  return products.filter((p) => p.badge === 'bestseller' || p.rating >= 4.7).slice(0, 8);
+}
+
+export function getNewArrivals(): Product[] {
+  return products.filter((p) => p.badge === 'new');
+}
+
+export function getRelatedProducts(product: Product, limit: number = 4): Product[] {
+  return products
+    .filter((p) => p.id !== product.id && p.category === product.category)
+    .slice(0, limit);
+}

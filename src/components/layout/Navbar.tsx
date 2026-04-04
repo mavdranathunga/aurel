@@ -1,0 +1,110 @@
+'use client';
+
+import { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { ShoppingBag, Heart, Search, Menu, X } from 'lucide-react';
+import { useCart } from '@/context/CartContext';
+import { useWishlist } from '@/context/WishlistContext';
+import styles from './Navbar.module.css';
+
+const navLinks = [
+  { label: 'Home', href: '/' },
+  { label: 'Shop', href: '/shop' },
+  { label: 'Collections', href: '/collections' },
+  { label: 'About', href: '/about' },
+  { label: 'Contact', href: '/contact' },
+];
+
+export default function Navbar() {
+  const [scrolled, setScrolled] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const { itemCount } = useCart();
+  const { itemCount: wishlistCount } = useWishlist();
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 50);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+    if (mobileOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+  }, [mobileOpen]);
+
+  return (
+    <>
+      <header className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`}>
+        <div className={`container ${styles.inner}`}>
+          <button
+            className={`${styles.menuBtn} btn-icon`}
+            onClick={() => setMobileOpen(true)}
+            aria-label="Open menu"
+            id="mobile-menu-toggle"
+          >
+            <Menu size={22} />
+          </button>
+
+          <Link href="/" className={styles.logo} id="navbar-logo">
+            AUREL
+          </Link>
+
+          <nav className={styles.nav} id="main-navigation">
+            {navLinks.map(link => (
+              <Link key={link.href} href={link.href} className={styles.navLink}>
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+
+          <div className={styles.actions}>
+            <Link href="/shop" className="btn-icon" aria-label="Search" id="nav-search">
+              <Search size={20} />
+            </Link>
+            <Link href="/wishlist" className={`btn-icon ${styles.iconWithBadge}`} aria-label="Wishlist" id="nav-wishlist">
+              <Heart size={20} />
+              {wishlistCount > 0 && <span className={styles.badge}>{wishlistCount}</span>}
+            </Link>
+            <Link href="/cart" className={`btn-icon ${styles.iconWithBadge}`} aria-label="Cart" id="nav-cart">
+              <ShoppingBag size={20} />
+              {itemCount > 0 && <span className={styles.badge}>{itemCount}</span>}
+            </Link>
+          </div>
+        </div>
+      </header>
+
+      {/* Mobile Menu Overlay */}
+      <div className={`${styles.mobileOverlay} ${mobileOpen ? styles.open : ''}`} onClick={() => setMobileOpen(false)} />
+      <div className={`${styles.mobileMenu} ${mobileOpen ? styles.open : ''}`} id="mobile-menu">
+        <div className={styles.mobileHeader}>
+          <span className={styles.mobileLogo}>AUREL</span>
+          <button className="btn-icon" onClick={() => setMobileOpen(false)} aria-label="Close menu">
+            <X size={22} />
+          </button>
+        </div>
+        <nav className={styles.mobileNav}>
+          {navLinks.map((link, i) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className={styles.mobileLink}
+              onClick={() => setMobileOpen(false)}
+              style={{ animationDelay: `${i * 0.05}s` }}
+            >
+              {link.label}
+            </Link>
+          ))}
+        </nav>
+        <div className={styles.mobileFooter}>
+          <Link href="/cart" className="btn btn-primary" onClick={() => setMobileOpen(false)} style={{ width: '100%' }}>
+            <ShoppingBag size={16} />
+            Cart {itemCount > 0 && `(${itemCount})`}
+          </Link>
+        </div>
+      </div>
+    </>
+  );
+}

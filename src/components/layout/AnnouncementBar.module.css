@@ -1,0 +1,40 @@
+.bar {
+  background: var(--accent);
+  color: var(--bg-primary);
+  height: var(--announcement-height);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 100;
+}
+
+.track {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  white-space: nowrap;
+  animation: marquee 30s linear infinite;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-family: var(--font-body);
+}
+
+.dot {
+  color: var(--bg-primary);
+  opacity: 0.5;
+  font-size: 0.5rem;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}

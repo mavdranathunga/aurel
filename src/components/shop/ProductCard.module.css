@@ -1,0 +1,146 @@
+.card {
+  display: block;
+  cursor: pointer;
+}
+
+.imageWrap {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin-bottom: var(--space-md);
+  background: var(--bg-card);
+}
+
+.imagePlaceholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--transition-slow);
+}
+
+.card:hover .imagePlaceholder {
+  transform: scale(1.05);
+}
+
+.placeholderText {
+  font-family: var(--font-heading);
+  font-size: 4rem;
+  color: var(--text-muted);
+  opacity: 0.3;
+  user-select: none;
+}
+
+.badge {
+  position: absolute;
+  top: var(--space-md);
+  left: var(--space-md);
+  z-index: 2;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--space-md);
+  display: flex;
+  gap: var(--space-sm);
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all var(--transition-base);
+}
+
+.card:hover .overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.actionBtn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.actionBtn:hover {
+  background: var(--accent);
+  color: var(--bg-primary);
+  border-color: var(--accent);
+}
+
+.wishlisted {
+  color: var(--accent);
+}
+
+.info {
+  padding: 0 var(--space-xs);
+}
+
+.category {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--text-muted);
+}
+
+.name {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin: 4px 0 8px;
+  transition: color var(--transition-base);
+}
+
+.card:hover .name {
+  color: var(--accent);
+}
+
+.priceRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: 8px;
+}
+
+.price {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.originalPrice {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-decoration: line-through;
+}
+
+.discount {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--error);
+}
+
+.colors {
+  display: flex;
+  gap: 6px;
+}
+
+.colorDot {
+  width: 12px;
+  height: 12px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border);
+}
