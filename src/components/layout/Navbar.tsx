@@ -1,17 +1,18 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { ShoppingBag, Heart, Search, Menu, X, Sun, Moon } from 'lucide-react';
 import { useCart } from '@/context/CartContext';
 import { useWishlist } from '@/context/WishlistContext';
 import { useTheme } from 'next-themes';
+import Megamenu from './Megamenu';
 import styles from './Navbar.module.css';
 
 const navLinks = [
   { label: 'Home', href: '/' },
-  { label: 'Shop', href: '/shop' },
-  { label: 'Collections', href: '/collections' },
+  { label: 'Shop', href: '/shop', hasMenu: true, type: 'shop' as const },
+  { label: 'Collections', href: '/collections', hasMenu: true, type: 'collections' as const },
   { label: 'About', href: '/about' },
   { label: 'Contact', href: '/contact' },
 ];
@@ -20,6 +21,9 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const [hoveredMenu, setHoveredMenu] = useState<'shop' | 'collections' | null>(null);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+
   const { itemCount } = useCart();
   const { itemCount: wishlistCount } = useWishlist();
   const { theme, setTheme } = useTheme();
@@ -39,9 +43,23 @@ export default function Navbar() {
     }
   }, [mobileOpen]);
 
+  const handleMouseEnter = (type?: 'shop' | 'collections') => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    setHoveredMenu(type || null);
+  };
+
+  const handleMouseLeave = () => {
+    timeoutRef.current = setTimeout(() => {
+      setHoveredMenu(null);
+    }, 150);
+  };
+
   return (
     <>
-      <header className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`}>
+      <header 
+        className={`${styles.navbar} ${scrolled ? styles.scrolled : ''} ${hoveredMenu ? styles.menuOpen : ''}`}
+        onMouseLeave={handleMouseLeave}
+      >
         <div className={`container ${styles.inner}`}>
           <button
             className={`${styles.menuBtn} btn-icon`}
@@ -58,9 +76,15 @@ export default function Navbar() {
 
           <nav className={styles.nav} id="main-navigation">
             {navLinks.map(link => (
-              <Link key={link.href} href={link.href} className={styles.navLink}>
-                {link.label}
-              </Link>
+              <div 
+                key={link.href} 
+                className={styles.navItem}
+                onMouseEnter={() => handleMouseEnter(link.hasMenu ? link.type : undefined)}
+              >
+                <Link href={link.href} className={styles.navLink}>
+                  {link.label}
+                </Link>
+              </div>
             ))}
           </nav>
 
@@ -89,6 +113,13 @@ export default function Navbar() {
             </Link>
           </div>
         </div>
+
+        {hoveredMenu && (
+          <Megamenu 
+            type={hoveredMenu} 
+            onClose={() => setHoveredMenu(null)} 
+          />
+        )}
       </header>
 
       {/* Mobile Menu Overlay */}
