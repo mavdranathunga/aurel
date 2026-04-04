@@ -1,16 +1,24 @@
 'use client';
 
+import { useState } from 'react';
 import Link from 'next/link';
 import { Minus, Plus, X, ShoppingBag, ArrowRight, Tag } from 'lucide-react';
 import { useCart } from '@/context/CartContext';
 import { formatPrice } from '@/lib/utils';
+import CheckoutModal from '@/components/checkout/CheckoutModal';
 import styles from './cart.module.css';
 
 export default function CartPage() {
   const { items, removeItem, updateQuantity, subtotal, clearCart } = useCart();
+  const [isCheckoutOpen, setIsCheckoutOpen] = useState(false);
 
   const shipping = subtotal >= 150 ? 0 : 15;
   const total = subtotal + shipping;
+
+  const handleCheckoutSuccess = () => {
+    clearCart();
+    setIsCheckoutOpen(false);
+  };
 
   if (items.length === 0) {
     return (
@@ -119,7 +127,12 @@ export default function CartPage() {
                 <span>{formatPrice(total)}</span>
               </div>
 
-              <button className="btn btn-primary" style={{ width: '100%', marginTop: 'var(--space-md)' }} id="checkout-btn">
+              <button 
+                className="btn btn-primary" 
+                style={{ width: '100%', marginTop: 'var(--space-md)' }} 
+                id="checkout-btn"
+                onClick={() => setIsCheckoutOpen(true)}
+              >
                 Proceed to Checkout
               </button>
 
@@ -130,6 +143,13 @@ export default function CartPage() {
           </div>
         </div>
       </div>
+
+      <CheckoutModal 
+        isOpen={isCheckoutOpen} 
+        onClose={() => setIsCheckoutOpen(false)}
+        onSuccess={handleCheckoutSuccess}
+        subtotal={subtotal}
+      />
     </div>
   );
 }
