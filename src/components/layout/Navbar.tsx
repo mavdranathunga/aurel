@@ -2,9 +2,10 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ShoppingBag, Heart, Search, Menu, X } from 'lucide-react';
+import { ShoppingBag, Heart, Search, Menu, X, Sun, Moon } from 'lucide-react';
 import { useCart } from '@/context/CartContext';
 import { useWishlist } from '@/context/WishlistContext';
+import { useTheme } from 'next-themes';
 import styles from './Navbar.module.css';
 
 const navLinks = [
@@ -18,10 +19,13 @@ const navLinks = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const { itemCount } = useCart();
   const { itemCount: wishlistCount } = useWishlist();
+  const { theme, setTheme } = useTheme();
 
   useEffect(() => {
+    setMounted(true);
     const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -64,6 +68,17 @@ export default function Navbar() {
             <Link href="/shop" className="btn-icon" aria-label="Search" id="nav-search">
               <Search size={20} />
             </Link>
+            
+            {mounted && (
+              <button
+                className="btn-icon"
+                onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                aria-label="Toggle theme"
+              >
+                {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+              </button>
+            )}
+
             <Link href="/wishlist" className={`btn-icon ${styles.iconWithBadge}`} aria-label="Wishlist" id="nav-wishlist">
               <Heart size={20} />
               {wishlistCount > 0 && <span className={styles.badge}>{wishlistCount}</span>}

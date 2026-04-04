@@ -8,6 +8,7 @@ import Footer from '@/components/layout/Footer';
 import AnnouncementBar from '@/components/layout/AnnouncementBar';
 import Toast from '@/components/ui/Toast';
 import ScrollToTop from '@/components/ui/ScrollToTop';
+import { ThemeProvider } from '@/components/ThemeProvider';
 
 const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
@@ -40,18 +41,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${cormorant.variable} ${inter.variable}`}>
+    <html lang="en" className={`${cormorant.variable} ${inter.variable}`} suppressHydrationWarning>
       <body>
-        <CartProvider>
-          <WishlistProvider>
-            <AnnouncementBar />
-            <Navbar />
-            <main>{children}</main>
-            <Footer />
-            <ScrollToTop />
-            <Toast />
-          </WishlistProvider>
-        </CartProvider>
+        <ThemeProvider attribute="data-theme" defaultTheme="light" enableSystem>
+          <CartProvider>
+            <WishlistProvider>
+              <AnnouncementBar />
+              <Navbar />
+              <main>{children}</main>
+              <Footer />
+              <ScrollToTop />
+              <Toast />
+            </WishlistProvider>
+          </CartProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

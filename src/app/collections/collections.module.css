@@ -30,10 +30,7 @@
   cursor: pointer;
 }
 
-.cardLarge {
-  grid-column: span 2;
-  height: 400px;
-}
+
 
 .cardBg {
   position: absolute;
@@ -68,12 +65,13 @@
   font-family: var(--font-heading);
   font-size: 2rem;
   font-weight: 300;
+  color: #FAFAFA;
   margin-bottom: var(--space-sm);
 }
 
 .cardDesc {
   font-size: 0.85rem;
-  color: var(--text-secondary);
+  color: #D4C5A9;
   line-height: 1.6;
   max-width: 400px;
   margin-bottom: var(--space-lg);
@@ -87,7 +85,7 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  color: var(--text-secondary);
+  color: #D4C5A9;
   transition: color var(--transition-base);
 }
 
