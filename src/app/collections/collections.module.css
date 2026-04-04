@@ -36,6 +36,33 @@
   position: absolute;
   inset: 0;
   transition: transform var(--transition-slow);
+  z-index: 0;
+}
+
+.imageOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 60%);
+  z-index: 1;
+  opacity: 0.8;
+}
+
+.cardImage {
+  position: absolute;
+  right: -10px;
+  bottom: 10px;
+  width: 180px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  transition: all var(--transition-slow);
+  z-index: 1;
+  transform: rotate(2deg);
+}
+
+.card:hover .cardImage {
+  transform: rotate(0) scale(1.05) translateX(-5px);
 }
 
 .card:hover .cardBg {

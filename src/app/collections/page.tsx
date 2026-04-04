@@ -38,6 +38,9 @@ export default function CollectionsPage() {
             <ScrollReveal key={col.id} delay={i * 100}>
               <Link href="/shop" className={styles.card}>
                 <div className={styles.cardBg} style={{ background: gradients[i % gradients.length] }} />
+                <div className={styles.imageOverlay} />
+                <img src={col.image} alt={col.name} className={styles.cardImage} />
+                
                 <div className={styles.cardContent}>
                   <span className={styles.cardCount}>{col.productCount} pieces</span>
                   <h2 className={styles.cardTitle}>{col.name}</h2>
