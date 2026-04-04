@@ -8,6 +8,7 @@ import Footer from '@/components/layout/Footer';
 import AnnouncementBar from '@/components/layout/AnnouncementBar';
 import Toast from '@/components/ui/Toast';
 import ScrollToTop from '@/components/ui/ScrollToTop';
+import FloatingWhatsApp from '@/components/ui/FloatingWhatsApp';
 import { ThemeProvider } from '@/components/ThemeProvider';
 
 const cormorant = Cormorant_Garamond({
@@ -51,6 +52,7 @@ export default function RootLayout({
               <main>{children}</main>
               <Footer />
               <ScrollToTop />
+              <FloatingWhatsApp />
               <Toast />
             </WishlistProvider>
           </CartProvider>

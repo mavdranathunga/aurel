@@ -1,0 +1,69 @@
+.button {
+  position: fixed;
+  bottom: 32px;
+  right: var(--space-xl);
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-full);
+  background: #25D366; /* WhatsApp Green */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 98; /* Just below ScrollToTop's 99 */
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.5);
+  transition: all var(--transition-base);
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+  text-decoration: none;
+}
+
+.button:hover {
+  transform: scale(1.1) translateY(-2px);
+  box-shadow: 0 6px 16px rgba(37, 211, 102, 0.4);
+  background: #22c35e;
+}
+
+.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+.tooltip {
+  position: absolute;
+  right: 60px;
+  background: var(--bg-card);
+  color: var(--text-primary);
+  padding: var(--space-xs) var(--space-md);
+  border-radius: var(--radius-md);
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+  box-shadow: var(--shadow-sm);
+  opacity: 0;
+  transform: translateX(10px);
+  transition: all var(--transition-base);
+  pointer-events: none;
+  border: 1px solid var(--border);
+}
+
+.button:hover .tooltip {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media (max-width: 640px) {
+  .button {
+    bottom: 24px;
+    right: var(--space-md);
+    width: 44px;
+    height: 44px;
+  }
+  
+  .tooltip {
+    display: none;
+  }
+}

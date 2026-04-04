@@ -1,6 +1,6 @@
 .button {
   position: fixed;
-  bottom: var(--space-xl);
+  bottom: 100px;
   right: var(--space-xl);
   width: 44px;
   height: 44px;
@@ -36,7 +36,7 @@
 
 @media (max-width: 640px) {
   .button {
-    bottom: var(--space-md);
+    bottom: 84px;
     right: var(--space-md);
   }
 }
