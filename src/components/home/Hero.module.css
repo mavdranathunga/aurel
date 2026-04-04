@@ -1,10 +1,17 @@
 .hero {
   position: relative;
-  min-height: 100vh;
+  height: 100vh;
+  height: 100dvh;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  background: var(--bg-primary);
+}
+
+.bgGradient {
+  position: absolute;
+  inset: 0;
   background: linear-gradient(
     135deg,
     var(--bg-primary) 0%,
@@ -12,11 +19,36 @@
     var(--bg-primary) 60%,
     var(--bg-card) 100%
   );
+  transition: opacity 1s ease-in-out;
+}
+
+.slideImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out, transform 8s ease-out;
+  transform: scale(1.05);
+}
+
+.slideImage.active {
+  opacity: 0.6;
+  transform: scale(1);
+}
+
+.imageOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.7) 100%);
+  z-index: 1;
 }
 
 .bgOverlay {
   position: absolute;
   inset: 0;
+  z-index: 1;
   background:
     radial-gradient(ellipse at 20% 50%, rgba(201, 169, 110, 0.06) 0%, transparent 60%),
     radial-gradient(ellipse at 80% 20%, rgba(201, 169, 110, 0.04) 0%, transparent 50%),
@@ -33,24 +65,37 @@
   pointer-events: none;
 }
 
-.verticalLine {
+.navBtn {
   position: absolute;
-  left: 50%;
-  top: 0;
-  width: 1px;
-  height: 80px;
-  background: linear-gradient(to bottom, transparent, var(--accent), transparent);
-  opacity: 0.3;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(10, 10, 10, 0.4);
+  color: #FAFAFA;
+  border-radius: var(--radius-full);
+  z-index: 10;
+  transition: all var(--transition-base);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
 }
 
-.cornerBorder {
-  position: absolute;
-  top: 120px;
-  right: 60px;
-  width: 120px;
-  height: 120px;
-  border-top: 1px solid rgba(201, 169, 110, 0.15);
-  border-right: 1px solid rgba(201, 169, 110, 0.15);
+.navBtn:hover {
+  background: var(--accent);
+  color: #0A0A0A;
+  transform: translateY(-50%) scale(1.05);
+}
+
+.prevBtn {
+  left: var(--space-2xl);
+}
+
+.nextBtn {
+  right: var(--space-2xl);
 }
 
 .content {
@@ -60,7 +105,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: calc(var(--nav-height) + var(--announcement-height) + 40px);
+  padding-top: 100px; /* Safe clearance for navbar */
 }
 
 .content > * {
@@ -79,6 +124,14 @@
 .content.loaded > *:nth-child(3) { transition-delay: 0.5s; }
 .content.loaded > *:nth-child(4) { transition-delay: 0.7s; }
 .content.loaded > *:nth-child(5) { transition-delay: 0.9s; }
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 380px; 
+}
 
 .labelRow {
   display: flex;
@@ -190,8 +243,54 @@
   50% { transform: translateX(-50%) translateY(8px); }
 }
 
+.dots {
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: var(--space-md);
+  z-index: 10;
+}
+
+.dot {
+  width: 40px;
+  height: 2px;
+  background: color-mix(in srgb, var(--text-primary) 30%, transparent);
+  transition: all var(--transition-base);
+  cursor: pointer;
+  padding: 0;
+}
+
+.dotsLightText .dot {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.dot:hover {
+  background: color-mix(in srgb, var(--text-primary) 60%, transparent);
+}
+
+.dotsLightText .dot:hover {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.dot.active {
+  background: var(--accent);
+}
+
+/* Force light text on promotional overlays */
+.content.lightText .titleLine,
+.content.lightText .subtitle,
+.content.lightText .statValue {
+  color: #FAFAFA;
+}
+.content.lightText .statLabel,
+.content.lightText .btn-ghost {
+  color: #D4C5A9;
+}
+
 @media (max-width: 640px) {
-  .cornerBorder { display: none; }
+  .navBtn { display: none; }
   .stats { gap: var(--space-lg); }
   .statValue { font-size: 1.25rem; }
   .actions {

@@ -101,6 +101,17 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+input,
+textarea,
+[contenteditable="true"] {
+  user-select: text;
+  -webkit-user-select: text;
 }
 
 html {
@@ -301,9 +312,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-ghost {
+  display: inline-flex;
+  align-items: center;
   background: transparent;
   color: var(--text-primary);
-  padding: 10px 0;
+  padding: 14px 0;
   letter-spacing: 0.15em;
 }
 

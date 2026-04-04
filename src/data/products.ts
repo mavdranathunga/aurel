@@ -20,7 +20,7 @@ export const products: Product[] = [
     care: ['Dry clean only', 'Store on a padded hanger', 'Steam to remove wrinkles'],
     category: 'men',
     subcategory: 'Blazers',
-    images: ['https://picsum.photos/seed/aurel_513/800/1200', 'https://picsum.photos/seed/aurel_959/800/1200'],
+    images: ['https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=800&auto=format&fit=crop', 'https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=800&auto=format&fit=crop'],
     sizes: [
       { label: 'S', available: true },
       { label: 'M', available: true },
@@ -56,7 +56,7 @@ export const products: Product[] = [
     care: ['Professional dry clean', 'Store in garment bag', 'Avoid direct sunlight'],
     category: 'women',
     subcategory: 'Dresses',
-    images: ['https://picsum.photos/seed/aurel_984/800/1200', 'https://picsum.photos/seed/aurel_768/800/1200'],
+    images: ['https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=800&auto=format&fit=crop', 'https://images.unsplash.com/photo-1503342394128-c104d54dba01?q=80&w=800&auto=format&fit=crop'],
     sizes: [
       { label: 'XS', available: true },
       { label: 'S', available: true },
@@ -92,7 +92,7 @@ export const products: Product[] = [
     care: ['Wipe with damp cloth', 'Apply leather conditioner monthly', 'Store stuffed to maintain shape'],
     category: 'accessories',
     subcategory: 'Bags',
-    images: ['https://picsum.photos/seed/aurel_749/800/1200', 'https://picsum.photos/seed/aurel_22/800/1200'],
+    images: ['https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?q=80&w=800&auto=format&fit=crop', 'https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?q=80&w=800&auto=format&fit=crop'],
     sizes: [
       { label: 'One Size', available: true }
     ],
@@ -124,7 +124,7 @@ export const products: Product[] = [
     care: ['Dry clean only', 'Use cedar hangers', 'Brush after each wear'],
     category: 'men',
     subcategory: 'Outerwear',
-    images: ['https://picsum.photos/seed/aurel_437/800/1200', 'https://picsum.photos/seed/aurel_634/800/1200'],
+    images: ['https://plus.unsplash.com/premium_photo-1668485966810-cbd0f685f58f?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', 'https://images.unsplash.com/photo-1544005313-941dd4b46514?q=80&w=800&auto=format&fit=crop'],
     sizes: [
       { label: 'S', available: false },
       { label: 'M', available: true },
@@ -158,7 +158,7 @@ export const products: Product[] = [
     care: ['Hand wash cold', 'Lay flat to dry', 'Do not tumble dry'],
     category: 'men',
     subcategory: 'Knitwear',
-    images: ['https://picsum.photos/seed/aurel_957/800/1200', 'https://picsum.photos/seed/aurel_870/800/1200'],
+    images: ['https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=800&auto=format&fit=crop', 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800&auto=format&fit=crop'],
     sizes: [
       { label: 'S', available: true },
       { label: 'M', available: true },
@@ -193,7 +193,7 @@ export const products: Product[] = [
     care: ['Dry clean recommended', 'Iron at medium heat', 'Hang on wooden hanger'],
     category: 'men',
     subcategory: 'Suits',
-    images: ['https://picsum.photos/seed/aurel_53/800/1200', 'https://picsum.photos/seed/aurel_366/800/1200'],
+    images: ['https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=800&auto=format&fit=crop', 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop'],
     sizes: [
       { label: 'S', available: true },
       { label: 'M', available: true },
@@ -226,7 +226,7 @@ export const products: Product[] = [
     care: ['Hand wash in cold water', 'Use cashmere shampoo', 'Reshape and dry flat'],
     category: 'accessories',
     subcategory: 'Scarves',
-    images: ['https://picsum.photos/seed/aurel_285/800/1200', 'https://picsum.photos/seed/aurel_312/800/1200'],
+    images: ['https://plus.unsplash.com/premium_photo-1668319915384-3cccf7689bef?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8ZmFzaGlvbiUyMGdpcmx8ZW58MHx8MHx8fDA%3D', 'https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=800&auto=format&fit=crop'],
     sizes: [
       { label: 'One Size', available: true }
     ],
@@ -256,7 +256,7 @@ export const products: Product[] = [
     care: ['Dry clean or gentle machine wash', 'Iron on low', 'Hang dry'],
     category: 'women',
     subcategory: 'Trousers',
-    images: ['https://picsum.photos/seed/aurel_507/800/1200', 'https://picsum.photos/seed/aurel_765/800/1200'],
+    images: ['https://images.unsplash.com/photo-1576828831022-ca41d3905fb7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGZhc2hpb24lMjBnaXJsfGVufDB8fDB8fHww', 'https://images.unsplash.com/photo-1503342394128-c104d54dba01?q=80&w=800&auto=format&fit=crop'],
     sizes: [
       { label: 'XS', available: true },
       { label: 'S', available: true },
@@ -292,7 +292,7 @@ export const products: Product[] = [
     care: ['Avoid contact with water beyond rating', 'Wipe with soft cloth', 'Service every 3-5 years'],
     category: 'accessories',
     subcategory: 'Watches',
-    images: ['https://picsum.photos/seed/aurel_47/800/1200', 'https://picsum.photos/seed/aurel_998/800/1200'],
+    images: ['https://images.unsplash.com/photo-1621786030484-4c855eed6974?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGZhc2hpb24lMjBnaXJsfGVufDB8fDB8fHww', 'https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?q=80&w=800&auto=format&fit=crop'],
     sizes: [
       { label: 'One Size', available: true }
     ],
@@ -323,7 +323,7 @@ export const products: Product[] = [
     care: ['Dry clean only', 'Cool iron on reverse', 'Store on padded hanger'],
     category: 'women',
     subcategory: 'Tops',
-    images: ['https://picsum.photos/seed/aurel_707/800/1200', 'https://picsum.photos/seed/aurel_961/800/1200'],
+    images: ['https://images.unsplash.com/photo-1603344797033-f0f4f587ab60?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGZhc2hpb24lMjBnaXJsfGVufDB8fDB8fHww', 'https://images.unsplash.com/photo-1544005313-941dd4b46514?q=80&w=800&auto=format&fit=crop'],
     sizes: [
       { label: 'XS', available: true },
       { label: 'S', available: true },
@@ -358,7 +358,7 @@ export const products: Product[] = [
     care: ['Use shoe trees when not wearing', 'Polish regularly', 'Rotate with other shoes'],
     category: 'men',
     subcategory: 'Shoes',
-    images: ['https://picsum.photos/seed/aurel_391/800/1200', 'https://picsum.photos/seed/aurel_930/800/1200'],
+    images: ['https://images.unsplash.com/photo-1523260578934-e9318da58c8d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGZhc2hpb24lMjBnaXJsfGVufDB8fDB8fHww', 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800&auto=format&fit=crop'],
     sizes: [
       { label: '40', available: true },
       { label: '41', available: true },
@@ -395,7 +395,7 @@ export const products: Product[] = [
     care: ['Dry clean only', 'Store folded', 'Steam to refresh'],
     category: 'women',
     subcategory: 'Outerwear',
-    images: ['https://picsum.photos/seed/aurel_641/800/1200', 'https://picsum.photos/seed/aurel_164/800/1200'],
+    images: ['https://images.unsplash.com/photo-1611558709798-e009c8fd7706?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGZhc2hpb24lMjBnaXJsfGVufDB8fDB8fHww', 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop'],
     sizes: [
       { label: 'S', available: true },
       { label: 'M', available: true },
@@ -428,7 +428,7 @@ export const products: Product[] = [
     care: ['Machine wash warm', 'Tumble dry low', 'Iron on medium'],
     category: 'men',
     subcategory: 'Shirts',
-    images: ['https://picsum.photos/seed/aurel_537/800/1200', 'https://picsum.photos/seed/aurel_905/800/1200'],
+    images: ['https://images.unsplash.com/photo-1609505848912-b7c3b8b4beda?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Z2lybHxlbnwwfHwwfHx8MA%3D%3D', 'https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=800&auto=format&fit=crop'],
     sizes: [
       { label: 'S', available: true },
       { label: 'M', available: true },
@@ -463,7 +463,7 @@ export const products: Product[] = [
     care: ['Protect with suede spray', 'Brush with suede brush', 'Store in dust bag'],
     category: 'accessories',
     subcategory: 'Bags',
-    images: ['https://picsum.photos/seed/aurel_228/800/1200', 'https://picsum.photos/seed/aurel_930/800/1200'],
+    images: ['https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Z2lybHxlbnwwfHwwfHx8MA%3D%3D', 'https://images.unsplash.com/photo-1503342394128-c104d54dba01?q=80&w=800&auto=format&fit=crop'],
     sizes: [
       { label: 'One Size', available: true }
     ],
@@ -494,7 +494,7 @@ export const products: Product[] = [
     care: ['Hand wash cold', 'Lay flat to dry', 'Do not bleach'],
     category: 'women',
     subcategory: 'Dresses',
-    images: ['https://picsum.photos/seed/aurel_901/800/1200', 'https://picsum.photos/seed/aurel_563/800/1200'],
+    images: ['https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGdpcmx8ZW58MHx8MHx8fDA%3D', 'https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?q=80&w=800&auto=format&fit=crop'],
     sizes: [
       { label: 'XS', available: true },
       { label: 'S', available: true },
@@ -528,7 +528,7 @@ export const products: Product[] = [
     care: ['Condition every 6 months', 'Store rolled or hanging', 'Avoid prolonged moisture'],
     category: 'accessories',
     subcategory: 'Belts',
-    images: ['https://picsum.photos/seed/aurel_464/800/1200', 'https://picsum.photos/seed/aurel_832/800/1200'],
+    images: ['https://images.unsplash.com/photo-1604004555489-723a93d6ce74?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGdpcmx8ZW58MHx8MHx8fDA%3D', 'https://images.unsplash.com/photo-1544005313-941dd4b46514?q=80&w=800&auto=format&fit=crop'],
     sizes: [
       { label: 'S', available: true },
       { label: 'M', available: true },
@@ -561,7 +561,7 @@ export const products: Product[] = [
     care: ['Dry clean only', 'Iron on wool setting', 'Hang to store'],
     category: 'women',
     subcategory: 'Trousers',
-    images: ['https://picsum.photos/seed/aurel_780/800/1200', 'https://picsum.photos/seed/aurel_11/800/1200'],
+    images: ['https://plus.unsplash.com/premium_photo-1675200124904-dfadce24119f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGdpcmx8ZW58MHx8MHx8fDA%3D', 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800&auto=format&fit=crop'],
     sizes: [
       { label: 'XS', available: true },
       { label: 'S', available: true },
@@ -595,7 +595,7 @@ export const products: Product[] = [
     care: ['Machine wash cold', 'Tumble dry low', 'Iron on low if needed'],
     category: 'men',
     subcategory: 'T-Shirts',
-    images: ['https://picsum.photos/seed/aurel_476/800/1200', 'https://picsum.photos/seed/aurel_948/800/1200'],
+    images: ['https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGdpcmx8ZW58MHx8MHx8fDA%3D', 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop'],
     sizes: [
       { label: 'S', available: true },
       { label: 'M', available: true },
@@ -630,7 +630,7 @@ export const products: Product[] = [
     care: ['Machine wash delicate', 'Hang dry', 'Low iron if needed'],
     category: 'women',
     subcategory: 'Skirts',
-    images: ['https://picsum.photos/seed/aurel_156/800/1200', 'https://picsum.photos/seed/aurel_240/800/1200'],
+    images: ['https://images.unsplash.com/photo-1601288496920-b6154fe3626a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGdpcmx8ZW58MHx8MHx8fDA%3D', 'https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=800&auto=format&fit=crop'],
     sizes: [
       { label: 'XS', available: true },
       { label: 'S', available: true },
@@ -665,7 +665,7 @@ export const products: Product[] = [
     care: ['Clean with included cloth', 'Store in hard case', 'Avoid placing lens-down'],
     category: 'accessories',
     subcategory: 'Eyewear',
-    images: ['https://picsum.photos/seed/aurel_388/800/1200', 'https://picsum.photos/seed/aurel_88/800/1200'],
+    images: ['https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bW9kZWx8ZW58MHx8MHx8fDA%3D', 'https://images.unsplash.com/photo-1503342394128-c104d54dba01?q=80&w=800&auto=format&fit=crop'],
     sizes: [
       { label: 'One Size', available: true }
     ],
