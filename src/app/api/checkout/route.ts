@@ -20,6 +20,10 @@ export async function POST(req: Request) {
     const sellerEmail = process.env.SELLER_EMAIL || 'deshan.99.ranathunga@gmail.com';
 
     if (!process.env.RESEND_API_KEY) {
+      if (process.env.NODE_ENV === 'production') {
+        console.error('CRITICAL: RESEND_API_KEY is missing in production environment variables.');
+        return NextResponse.json({ error: 'Email configuration is missing on the server.' }, { status: 500 });
+      }
       console.warn('RESEND_API_KEY is not set. Simulating email send for development.');
       return NextResponse.json({ success: true, simulated: true });
     }
