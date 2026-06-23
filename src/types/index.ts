@@ -22,6 +22,7 @@ export interface Product {
 export interface Size {
   label: string;
   available: boolean;
+  stock?: number;
 }
 
 export interface ProductColor {
